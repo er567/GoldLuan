@@ -193,7 +193,6 @@
 	
 	if ( $('[data-pmbgimage]').length ){
 		var $pmbgimage = $('[data-pmbgimage]').attr('data-pmbgimage');
-		console.log($pmbgimage);
 		$('[data-pmbgimage]').css({
 			"background-image": "url("+$pmbgimage+")"
 		})
