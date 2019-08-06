@@ -1,7 +1,10 @@
 var gulp = require("gulp");
 var connect = require('gulp-connect'); // 启动服务
 var preprocess = require('gulp-preprocess');
-// var gulpConnectSsi = require('gulp-connect-ssi');
+var gulpConnectSsi = require('gulp-connect-ssi');
+
+var browserSync  = require('browser-sync').create(); // 创建Browsersync实例
+var SSI          = require('browsersync-ssi');
 // var concat = require('gulp-concat'); //合并文件
 // var less = require('gulp-less'); // 转less
 // var jsuglify = require('gulp-uglify'); // 压缩js
@@ -21,11 +24,28 @@ gulp.task("server", function () {
   //   .pipe(rename("path.js"))
   //   .pipe(gulp.dest('./src/js'));
   // }
-	connect.server({
-		root: "src", // 路径 
-		livereload: true,
-    port: 8081
-	})
+
+
+	// connect.server({
+	// 	root: "src", // 路径 
+	// 	livereload: true,
+  //   port: 8081
+  // })
+  browserSync.init({
+    port: 8081,
+    livereload: true,
+    server: {
+      baseDir: "src",
+      proxy:'localhost', // 设置本地服务器的地址
+      middleware: [  
+        SSI({  
+           baseDir: "src",  
+           ext: ".html"  
+        })  
+      ]
+    }
+  });
+  gulp.watch("src/*.html").on('change', browserSync.reload)
 })
 
 //  热更新

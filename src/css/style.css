@@ -538,7 +538,7 @@ p {
 .plumber-navbar #plumber-nav li a {
   color: #fff;
   text-shadow: none;
-  padding: 0 25px;
+  padding: 0 50px;
   font: bold 16px/54px "Open Sans", sans-serif;
 }
 @media (max-width: 1199px) {

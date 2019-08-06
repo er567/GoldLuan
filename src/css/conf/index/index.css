@@ -22,12 +22,18 @@
 .main .container-fluid .text-content {
   position: absolute;
   top: 27%;
-  left: 33%;
+  left: calc(50% - 300px);
   z-index: 999;
   width: 600px;
   color: #fff;
   font-size: 18px;
   text-align: center;
+}
+@media (max-width: 767px) and (min-width: 361px) {
+  .main .container-fluid .text-content {
+    width: 100%;
+    left: 0;
+  }
 }
 
 .main .container-fluid .text-content h1 {
