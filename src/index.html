@@ -24,7 +24,223 @@
 	<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+		<![endif]-->
+	<style>
+		ul.ul_businessareas {
+			padding-left: -40px !important;
+		}
+
+		.ul_businessareas {
+			text-align: center;
+			width: 1070px;
+			margin: 0 auto;
+			padding-left: 0;
+			font-size: 0;
+			padding-top: 30px;
+			padding-bottom: 60px;
+
+		}
+
+		.ul_businessareas li {
+			display: inline-block;
+			vertical-align: top;
+			width: 24%;
+			position: relative;
+			margin: 15px 0.5%;
+			overflow: hidden;
+		}
+
+		.ul_businessareas li img {
+			max-width: 100%;
+			padding: 30px;
+		}
+
+		.ul_businessareas li a .name {
+			color: #fff;
+			width: 100%;
+			padding: 15px 0 15px 15px;
+			text-align: left;
+			background: rgba(227, 24, 48, .9);
+			text-transform: uppercase;
+			position: absolute;
+			left: 0;
+			font-weight: 100;
+			bottom: 0px;
+			top: 0;
+			transform: translateY(175px);
+			/* Height you want shown at load */
+			-webkit-transition: all 0.2s ease-out;
+			-moz-transition: all 0.2s ease-out;
+			-o-transition: all 0.2s ease-out;
+			transition: all 0.2s ease-out;
+		}
+
+		.ul_businessareas li .name .name-text {
+			width: 60%;
+			height: 48px;
+			font-size: 16px;
+		}
+
+		.ul_businessareas li .overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(227, 227, 227, .0);
+			border: 1px solid #ededed;
+		}
+
+		.ul_businessareas li a {
+			text-decoration: none;
+			color: #fff;
+			display: block;
+			overflow: hidden;
+		}
+
+		.ul_businessareas li a:hover .name {
+			top: 0;
+			transform: translateY(0);
+			-webkit-transition: all 0.2s ease-out;
+			-moz-transition: all 0.2s ease-out;
+			-o-transition: all 0.2s ease-out;
+			transition: all 0.2s ease-out;
+		}
+
+		@media screen and (max-width:1199px) {
+			.ul_businessareas {
+				width: auto;
+			}
+
+			.ul_businessareas li {
+				width: 31%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(205px);
+			}
+		}
+
+		@media screen and (max-width:991px) {
+			.ul_businessareas li {
+				width: 49%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(250px);
+			}
+		}
+
+		@media screen and (max-width:767px) {
+			.ul_businessareas li {
+				width: 49%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(255px);
+			}
+		}
+
+		@media screen and (max-width:700px) {
+			.ul_businessareas li {
+				width: 49%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(240px);
+			}
+		}
+
+		@media screen and (max-width:675px) {
+			.ul_businessareas li {
+				width: 49%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(220px);
+			}
+		}
+
+		@media screen and (max-width:645px) {
+			.ul_businessareas li {
+				width: 49%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(210px);
+			}
+		}
+
+		@media screen and (max-width:620px) {
+			.ul_businessareas li {
+				width: 49%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(200px);
+			}
+		}
+
+		@media screen and (max-width:600px) {
+			.ul_businessareas li {
+				width: 49%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(190px);
+			}
+		}
+
+		@media screen and (max-width:580px) {
+			.ul_businessareas li {
+				width: 49%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(180px);
+			}
+		}
+
+		@media screen and (max-width:555px) {
+			.ul_businessareas li {
+				width: 49%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(165px);
+			}
+		}
+
+		@media screen and (max-width:520px) {
+			.ul_businessareas li {
+				width: 49%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(145px);
+			}
+		}
+
+		@media screen and (max-width:480px) {
+			.ul_businessareas li {
+				width: 49%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(125px);
+			}
+		}
+
+		@media screen and (max-width:450px) {
+			.ul_businessareas li {
+				width: 100%;
+			}
+
+			.ul_businessareas li a .name {
+				transform: translateY(73%);
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -112,7 +328,7 @@
 							<li><a href="about.html">About Us</a></li>
 							<li><a href="services.html">Business Areas</a></li>
 							<li><a href="shop.html">Solutions</a></li>
-							<li><a href="single-product.html">Why JinLuan?</a></li>
+							<li><a href="cart.html">Why JinLuan?</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 						<ul class="nav nav-pills header-social">
@@ -149,225 +365,9 @@
 	</div>
 	<div class="container">
 		<h2>Our business areas</h2>
-		<style>
-			ul.ul_businessareas {
-				padding-left: -40px !important;
-			}
-
-			.ul_businessareas {
-				text-align: center;
-				width: 1070px;
-				margin: 0 auto;
-				padding-left: 0;
-				font-size: 0;
-				padding-top: 30px;
-				padding-bottom: 60px;
-
-			}
-
-			.ul_businessareas li {
-				display: inline-block;
-				vertical-align: top;
-				width: 24%;
-				position: relative;
-				margin: 15px 0.5%;
-				overflow: hidden;
-			}
-
-			.ul_businessareas li img {
-				max-width: 100%;
-				padding: 30px;
-			}
-
-			.ul_businessareas li a .name {
-				color: #fff;
-				width: 100%;
-				padding: 15px 0 15px 15px;
-				text-align: left;
-				background: rgba(227, 24, 48, .9);
-				text-transform: uppercase;
-				position: absolute;
-				left: 0;
-				font-weight: 100;
-				bottom: 0px;
-				top: 0;
-				transform: translateY(175px);
-				/* Height you want shown at load */
-				-webkit-transition: all 0.2s ease-out;
-				-moz-transition: all 0.2s ease-out;
-				-o-transition: all 0.2s ease-out;
-				transition: all 0.2s ease-out;
-			}
-
-			.ul_businessareas li .name .name-text {
-				width: 60%;
-				height: 48px;
-				font-size: 16px;
-			}
-
-			.ul_businessareas li .overlay {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(227, 227, 227, .0);
-				border: 1px solid #ededed;
-			}
-
-			.ul_businessareas li a {
-				text-decoration: none;
-				color: #fff;
-				display: block;
-				overflow: hidden;
-			}
-
-			.ul_businessareas li a:hover .name {
-				top: 0;
-				transform: translateY(0);
-				-webkit-transition: all 0.2s ease-out;
-				-moz-transition: all 0.2s ease-out;
-				-o-transition: all 0.2s ease-out;
-				transition: all 0.2s ease-out;
-			}
-
-			@media screen and (max-width:1199px) {
-				.ul_businessareas {
-					width: auto;
-				}
-
-				.ul_businessareas li {
-					width: 31%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(205px);
-				}
-			}
-
-			@media screen and (max-width:991px) {
-				.ul_businessareas li {
-					width: 49%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(250px);
-				}
-			}
-
-			@media screen and (max-width:767px) {
-				.ul_businessareas li {
-					width: 49%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(255px);
-				}
-			}
-
-			@media screen and (max-width:700px) {
-				.ul_businessareas li {
-					width: 49%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(240px);
-				}
-			}
-
-			@media screen and (max-width:675px) {
-				.ul_businessareas li {
-					width: 49%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(220px);
-				}
-			}
-
-			@media screen and (max-width:645px) {
-				.ul_businessareas li {
-					width: 49%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(210px);
-				}
-			}
-
-			@media screen and (max-width:620px) {
-				.ul_businessareas li {
-					width: 49%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(200px);
-				}
-			}
-
-			@media screen and (max-width:600px) {
-				.ul_businessareas li {
-					width: 49%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(190px);
-				}
-			}
-
-			@media screen and (max-width:580px) {
-				.ul_businessareas li {
-					width: 49%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(180px);
-				}
-			}
-
-			@media screen and (max-width:555px) {
-				.ul_businessareas li {
-					width: 49%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(165px);
-				}
-			}
-
-			@media screen and (max-width:520px) {
-				.ul_businessareas li {
-					width: 49%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(145px);
-				}
-			}
-
-			@media screen and (max-width:480px) {
-				.ul_businessareas li {
-					width: 49%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(125px);
-				}
-			}
-
-			@media screen and (max-width:450px) {
-				.ul_businessareas li {
-					width: 100%;
-				}
-
-				.ul_businessareas li a .name {
-					transform: translateY(73%);
-				}
-			}
-		</style>
 		<ul class="ul_businessareas">
 			<li>
-				<a id="ctl00_ctl00_77227_rpt_areas_ctl00_hl_en" href="/en/business-areas/electric-cabinets/about"><img
+				<a id="ctl00_ctl00_77227_rpt_areas_ctl00_hl_en" href="/single-product.html"><img
 						src="/images/businessareas/0e3bf9d80ca8effe31494f2ad981efeb.jpg">
 					<div class="overlay"></div>
 					<div class="name">
@@ -376,7 +376,7 @@
 				</a>
 			</li>
 			<li>
-				<a id="ctl00_ctl00_77227_rpt_areas_ctl01_hl_en" href="/en/business-areas/wiring-systems/about"><img
+				<a id="ctl00_ctl00_77227_rpt_areas_ctl01_hl_en" href="/single-product.html"><img
 						src="/images/businessareas/f202ce8a4e8e923e8b3b25d6b466b419.jpg">
 					<div class="overlay"></div>
 					<div class="name">
@@ -385,7 +385,7 @@
 				</a>
 			</li>
 			<li>
-				<a id="ctl00_ctl00_77227_rpt_areas_ctl02_hl_en" href="/en/business-areas/injection-molding/about"><img
+				<a id="ctl00_ctl00_77227_rpt_areas_ctl02_hl_en" href="/single-product.html"><img
 						src="/images/businessareas/301dfbbd9744e1f1a18bf1f8b415dcb0.jpg">
 					<div class="overlay"></div>
 					<div class="name">
@@ -394,7 +394,7 @@
 				</a>
 			</li>
 			<li>
-				<a id="ctl00_ctl00_77227_rpt_areas_ctl03_hl_en" href="/en/business-areas/sheet-metal-processing/about"><img
+				<a id="ctl00_ctl00_77227_rpt_areas_ctl03_hl_en" href="/single-product.html"><img
 						src="/images/businessareas/af35ba65e8797600fb2ab469e162ca09.jpg">
 					<div class="overlay"></div>
 					<div class="name">
@@ -403,7 +403,7 @@
 				</a>
 			</li>
 			<li>
-				<a id="ctl00_ctl00_77227_rpt_areas_ctl04_hl_en" href="/en/business-areas/system-products/about"><img
+				<a id="ctl00_ctl00_77227_rpt_areas_ctl04_hl_en" href="/single-product.html"><img
 						src="/images/businessareas/21381e3b59544fd00168f2130a1af62c.jpg">
 					<div class="overlay"></div>
 					<div class="name">
@@ -412,7 +412,7 @@
 				</a>
 			</li>
 			<li>
-				<a id="ctl00_ctl00_77227_rpt_areas_ctl05_hl_en" href="/en/business-areas/inductive-components/about"><img
+				<a id="ctl00_ctl00_77227_rpt_areas_ctl05_hl_en" href="/single-product.html"><img
 						src="/images/businessareas/977268918e3269a2e5b67093b0979bd7.jpg">
 					<div class="overlay"></div>
 					<div class="name">
@@ -421,7 +421,7 @@
 				</a>
 			</li>
 			<li>
-				<a id="ctl00_ctl00_77227_rpt_areas_ctl06_hl_en" href="/en/business-areas/engineering"><img
+				<a id="ctl00_ctl00_77227_rpt_areas_ctl06_hl_en" href="/single-product.html"><img
 						src="/images/businessareas/99608b48460e0e9a241e838afa1436c9.jpg">
 					<div class="overlay"></div>
 					<div class="name">

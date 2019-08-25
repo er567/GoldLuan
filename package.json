@@ -1,7 +1,7 @@
 {
-  "name": "foadmin",
+  "name": "goldLuan",
   "version": "1.0.0",
-  "description": "基于Layui的后台管理系统",
+  "description": "金銮官网",
   "main": "index.js",
   "directories": {
     "lib": "lib"
