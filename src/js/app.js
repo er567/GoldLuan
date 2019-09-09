@@ -1,7 +1,7 @@
 require.config({
   baseUrl: '/js',
   paths: {
-    'jquery': '/lib/jquery/jquery'
+    'jquery': 'lib/jquery/jquery'
   },
   config: {
     text: {
