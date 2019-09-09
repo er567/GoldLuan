@@ -214,7 +214,7 @@ var argv = require('minimist')(process.argv.slice(2), {
   ,mv: function(ver){
     ver = ver === 'open';
     
-    var src = ['./src/**/*.{png,jpg,gif,html,mp3,json,css}']
+    var src = ['./src/**/*.{png,jpg,gif,html,mp3,json,css,eot,ttf,woff,woff2}','./src/*.ico']
 		,dir = ver ? 'release' : 'build';
 		
     // src.push('./src/lib/layui/css/modules/layer/default/layer.css')
