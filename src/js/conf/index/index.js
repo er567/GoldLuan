@@ -7,7 +7,8 @@
 define(function (require, exports, module) {
   'use strict';
 
-  var $ = require('jquery'),
+  var 
+  // $ = require('jquery'),
       opt;
 
   opt = {
