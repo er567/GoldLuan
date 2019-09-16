@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/er567/foAdmin.git"
+    "url": "git+https://github.com/er567/GoldLuan.git"
   },
   "author": "er567",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/er567/foAdmin/issues"
+    "url": "https://github.com/er567/GoldLuan/issues"
   },
-  "homepage": "https://github.com/er567/foAdmin#readme",
+  "homepage": "https://github.com/er567/GoldLuan#readme",
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.0",

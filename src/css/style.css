@@ -1,8 +1,5 @@
 @charset "UTF-8";
 /*
-*	Plumbing Master
-*	Developed By: Nasir Uddin
-*	Developer URI: http://nasiruddin.com
 *	
 *	Main StyleSheets
 *	Develop with SCSS
@@ -39,7 +36,6 @@
 @import 'https://fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i,900,900i';
 @import 'https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i';
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700';
-@import url("https://fonts.googleapis.com/css?family=Pacifico");
 /*Font Variables*/
 /*====================================================*/
 .m0 {

@@ -7,7 +7,7 @@
 define(function (require, exports, module) {
   'use strict';
 
-  var $ = require('../lib/jquery/jquery'),
+  var $ = require('jquery'),
       opt;
 
   opt = {
@@ -15,7 +15,25 @@ define(function (require, exports, module) {
         this.bindEvent();
       },
       bindEvent: function () {
-        console.log(6)
+        $('#submitBtn').click(function(e){
+          let param = {
+            email: '',
+            message: '',
+            subject: '主题',
+            username: '',
+            phone_number: ''
+          }
+          param.email = $('#email').val()
+          param.message = $('#message').val()
+          param.username = $('#email').val()
+          param.phone_number = $('#phone_number').val()
+          $.post('//jinluan-admin.er567.cn/api/feedback',param,(res)=>{
+            layer.msg(res.message);
+          })
+        });
+      },
+      postFunc: function() {
+        
       }
   }
   opt.init(); //初始化
