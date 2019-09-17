@@ -69,7 +69,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
 var del = require('del');
-var rjs = require('requirejs');
+var requirejsOptimize = require('gulp-requirejs-optimize');
 var gulpif = require('gulp-if');
 var minimist = require('minimist');
 
@@ -91,19 +91,6 @@ var argv = require('minimist')(process.argv.slice(2), {
 
 //任务
 ,task = {
-  rjs: function (cb) {
-    rjs.optimize({
-        baseUrl: "src/js",
-        dir: 'build/js',
-        mainConfigFile: "src/js/app.js",
-        preserveLicenseComments: false,
-        //去掉头部版权声明
-        removeCombined: false, 
-        //自动删除被合并过的文件
-    }, function (buildResponse) {
-        cb();
-    }, cb)
-  },
   //压缩js模块
   minjs: function(ver) {
     ver = ver === 'open';
@@ -114,6 +101,7 @@ var argv = require('minimist')(process.argv.slice(2), {
     }() : ''
     ,src = [
       './src/**/*'+ mod +'.js'
+      ,'!./src/js/conf/**/*.js'
       ,'!./src/**/mobile/*.js'
       ,'!./src/lay/**/mobile.js'
       ,'!./src/lay/all.js'
@@ -126,8 +114,28 @@ var argv = require('minimist')(process.argv.slice(2), {
       src.push('!./src/lay/**/layim.js');
     }
 
-    return gulp.src(src).pipe(uglify())
-     .pipe(header.apply(null, note))
+    return gulp.src(src)
+    .pipe(uglify())
+    .pipe(header.apply(null, note))
+    .pipe(gulp.dest('./'+ dir));
+    
+  }
+
+  ,confjs: function(ver) {
+    ver = ver === 'open';
+
+    var src = ['./src/**/conf/**/*.js']
+    ,dir = ver ? 'release' : 'build';
+
+
+    return gulp.src(src)
+    .pipe(requirejsOptimize({
+      baseUrl: "src",
+      mainConfigFile: 'src/js/app.js',
+      skipModuleInsertion: true
+    }))
+    .pipe(uglify())
+    .pipe(header.apply(null, note))
     .pipe(gulp.dest('./'+ dir));
     
   }
