@@ -5,12 +5,6 @@ var gulpConnectSsi = require('gulp-connect-ssi');
 
 var browserSync  = require('browser-sync').create(); // 创建Browsersync实例
 var SSI          = require('browsersync-ssi');
-// var concat = require('gulp-concat'); //合并文件
-// var less = require('gulp-less'); // 转less
-// var jsuglify = require('gulp-uglify'); // 压缩js
-// var cssminify = require('gulp-minify-css'); //压缩css
-// var imageMin = require('gulp-imagemin'); // 压缩img
-// var htmlmin = require('gulp-htmlmin'); //压缩html
 
 
 //   服务，端口    

@@ -16,7 +16,7 @@ define(function (require, exports, module) {
       },
       bindEvent: function () {
         $('#submitBtn').click(function(e){
-          let param = {
+          var param = {
             email: '',
             message: '',
             subject: '主题',
@@ -27,7 +27,7 @@ define(function (require, exports, module) {
           param.message = $('#message').val()
           param.username = $('#email').val()
           param.phone_number = $('#phone_number').val()
-          $.post('//jinluan-admin.er567.cn/api/feedback',param,(res)=>{
+          $.post('//jinluan-admin.er567.cn/api/feedback',param,function(res){
             layer.msg(res.message);
           })
         });
