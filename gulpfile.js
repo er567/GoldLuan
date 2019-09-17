@@ -69,6 +69,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
 var del = require('del');
+var rjs = require('requirejs');
 var gulpif = require('gulp-if');
 var minimist = require('minimist');
 
@@ -90,7 +91,19 @@ var argv = require('minimist')(process.argv.slice(2), {
 
 //任务
 ,task = {
-  
+  rjs: function (cb) {
+    rjs.optimize({
+        baseUrl: "src/js",
+        dir: 'build/js',
+        mainConfigFile: "src/js/app.js",
+        preserveLicenseComments: false,
+        //去掉头部版权声明
+        removeCombined: false, 
+        //自动删除被合并过的文件
+    }, function (buildResponse) {
+        cb();
+    }, cb)
+  },
   //压缩js模块
   minjs: function(ver) {
     ver = ver === 'open';
