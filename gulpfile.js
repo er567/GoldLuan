@@ -129,11 +129,11 @@ var argv = require('minimist')(process.argv.slice(2), {
 
 
     return gulp.src(src)
-    .pipe(requirejsOptimize({
-      baseUrl: "src",
-      mainConfigFile: 'src/js/app.js',
-      skipModuleInsertion: true
-    }))
+    // .pipe(requirejsOptimize({
+    //   baseUrl: "src",
+    //   mainConfigFile: 'src/js/app.js',
+    //   skipModuleInsertion: true
+    // }))
     .pipe(uglify())
     .pipe(header.apply(null, note))
     .pipe(gulp.dest('./'+ dir));
