@@ -20,12 +20,11 @@ define(function (require, exports, module) {
             message: '',
             subject: '主题',
             username: '',
-            phone_number: ''
           }
           param.email = $('#email').val()
           param.message = $('#message').val()
-          param.username = $('#email').val()
-          param.phone_number = $('#phone_number').val()
+          param.username = $('#username').val()
+          param.subject = $('#subject').val()
           $.post('//jinluan-admin.er567.cn/api/feedback',param,function(res){
             layer.msg(res.message);
           })
