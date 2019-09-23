@@ -5012,7 +5012,7 @@ a.price-grid-title:hover, a.price-grid-title:focus {
 /*====================================================*/
 .footer-contacts {
   padding: 25px 0;
-  background: url(../images/bg5.jpg) no-repeat fixed center center;
+  /* background: url(../images/bg5.jpg) no-repeat fixed center center; */
 }
 .footer-contacts:before {
   content: '';
