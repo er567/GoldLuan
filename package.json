@@ -36,6 +36,7 @@
     "browser-sync": "^2.26.7",
     "browsersync-ssi": "^0.2.4",
     "gulp-connect-ssi": "^0.4.0",
-    "gulp-preprocess": "^3.0.2"
+    "gulp-preprocess": "^3.0.2",
+    "gulp-requirejs-optimize": "^1.3.0"
   }
 }
