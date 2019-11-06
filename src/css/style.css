@@ -323,18 +323,18 @@ p {
 .main-logo {
   display: inline-block;
   position: absolute;
-  top: -50px;
+  top: -30px;
 }
 .main-logo img {
   max-width: 100%;
-  height: 150px;
+  height: 100px;
 }
 @media (max-width: 991px) {
   .main-logo {
-    top: -30px;
+    top: -16px;
   }
   .main-logo img {
-    height: 100px;
+    height: 66px;
   }
 }
 .container {
@@ -5149,6 +5149,7 @@ a.price-grid-title:hover, a.price-grid-title:focus {
 }
 
 .footer-social {
+  display: none;
   margin-top: 28px;
 }
 .footer-social li + li {
