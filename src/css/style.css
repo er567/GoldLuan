@@ -5172,6 +5172,7 @@ a.price-grid-title:hover, a.price-grid-title:focus {
 }
 
 .newsletter-form {
+  display: none;
   margin: 0;
   padding: 20px 30px;
   border: 1px dashed rgba(255, 255, 255, 0.25);
@@ -5267,6 +5268,7 @@ a.price-grid-title:hover, a.price-grid-title:focus {
 }
 
 .credit-texts {
+  display: none;
   float: right;
 }
 
@@ -5277,14 +5279,6 @@ a.price-grid-title:hover, a.price-grid-title:focus {
   }
 }
 
-/*====================================================*/
-/* layout */
-@charset "UTF-8";
-/* ===================================================================
-CSS information
- file name  :  layout.css
- style info :  全ページ共通 枠組みレイアウト生成用 cssの定義
-=================================================================== */
 /****************************************************************/
 /* contents width */
 /****************************************************************/

@@ -14,7 +14,7 @@ define(function (require, exports, module) {
         this.bindEvent();
       },
       bindEvent: function () {
-        $('#submitBtn').click(function(e){
+        $('#submitBtn').unbind("click").click(function(e){
           var param = {
             email: '',
             message: '',
@@ -25,7 +25,7 @@ define(function (require, exports, module) {
           param.message = $('#message').val()
           param.username = $('#username').val()
           param.subject = $('#subject').val()
-          $.post('//jinluan-admin.er567.cn/api/feedback',param,function(res){
+          $.post('//jl-admin.diemakersjl.com/api/feedback',param,function(res){
             layer.msg(res.message);
           })
         });
